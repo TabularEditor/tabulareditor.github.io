@@ -1,5 +1,5 @@
 theme: jekyll-theme-cayman
 
-name: Tabular Editor
-description: Build Analysis Services Tabular models without the headaches
-avatar: https://tabulareditor.github.io/images/logo.png
+site:
+  title: Tabular Editor
+  description: Build Analysis Services Tabular models without the headaches
