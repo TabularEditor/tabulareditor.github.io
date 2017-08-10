@@ -1,5 +1,5 @@
 theme: jekyll-theme-cayman
 
 site:
-  title: Tabular Editor
+  name: Tabular Editor
   description: Build Analysis Services Tabular models without the headaches
