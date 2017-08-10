@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 
 title: Tabular Editor
-description: Build Analysis Services Tabular models without the headaches
+description: A lightweight editor for SSAS Tabular Models built in .NET/WinForms
