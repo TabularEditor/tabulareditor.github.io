@@ -1,0 +1,45 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+a {
+    color: inherit;
+}
+
+.project-name a {
+    text-decoration: none;
+}
+
+.site-footer {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    border-top: 1px solid;
+}
+
+.site-footer-links {
+    margin: 0;
+    list-style: none;
+    float: right;
+}
+
+.site-footer-links ul {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-padding-start: 40px;
+}
+
+.site-footer-links li {
+    display: inline-block;
+    line-height: 16px;
+    text-align: -webkit-match-parent;
+    margin-right: 40px;
+}
