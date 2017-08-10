@@ -1,3 +1,8 @@
+---
+title: Tabular Editor
+layout: post
+---
+
 # Tabular Editor
 
 Under construction.
