@@ -2,4 +2,4 @@
 
 Under construction.
 
-Please visit: https://github.com/otykier/TabularEditor
+Please visit: [github.com/otykier/TabularEditor](https://github.com/otykier/TabularEditor)
