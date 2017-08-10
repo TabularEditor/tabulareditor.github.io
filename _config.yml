@@ -1,5 +1,4 @@
 theme: jekyll-theme-cayman
 
-site:
-  name: Tabular Editor
-  description: Build Analysis Services Tabular models without the headaches
+title: Tabular Editor
+description: Build Analysis Services Tabular models without the headaches
