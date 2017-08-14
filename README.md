@@ -12,7 +12,9 @@ Tabular Editor lets you work offline by opening a Tabular Model directly from a 
 
 ## No downtime even on huge Models
 
-Since Tabular Editor only considers model metadata, you can load huge models with 100s of tables and 1000s of measures, and apply changes instantly. The model is not validated until you deploy it, and you are responsible for recalculating the model when the need arises. Compared to Visual Studio, this means you will never again have to wait for the workspace database to catch up, whenever you change a property on an object.
+Since Tabular Editor only considers model metadata, you can load huge models with 100s of tables and 1000s of measures, and apply changes instantly. The model is not validated until you deploy it, and you are responsible for recalculating the model when the need arises. Compared to Visual Studio, this means you will never again have to wait for the workspace database to catch up, whenever you change a property on an object. Tabular Editor also supports Azure Analysis Services.
+
+<img src="https://user-images.githubusercontent.com/8976200/29273714-9cedc194-8105-11e7-8d41-678742bcd6c8.png">
 
 ## Lots of features for increased productivity
 
