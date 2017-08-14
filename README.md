@@ -16,7 +16,7 @@ Since Tabular Editor only considers model metadata, you can load huge models wit
 
 ## Lots of features for increased productivity
 
-Tabular Editor lets you easily clone measures, columns, hierarchies and even entire tables. Perspectives and translations are applied in the context of individual objects, and you can apply filters to quickly locate objects in the model. Advanced users may use scripting to support their preferred workflows, and scripts can be saved as Custom Actions for easy invocation directly in the Explorer Tree.
+Tabular Editor lets you easily clone measures, columns, hierarchies and even entire tables. You can use CTRL+Z / CTRL+Y to undo and redo changes. You can multiselect and drag objects between Display Folders, tables and even across models (by opening multiple instances of Tabular Editor). Perspectives and translations are applied in the context of individual objects, and you can apply filters to quickly locate objects in the model. Advanced users may use scripting to support their preferred workflows, and scripts can be saved as Custom Actions for easy invocation directly in the Explorer Tree.
 
 <img src="https://user-images.githubusercontent.com/8976200/29273014-c82e7ebe-8102-11e7-86a1-74a18c433e7f.png" width="450">
 
