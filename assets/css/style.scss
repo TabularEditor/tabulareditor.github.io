@@ -9,10 +9,17 @@
 
 .left {
     align-items: stretch;
+    width: 60%;
+    text-align: justify;
 }
 
 .right {
     align-items: stretch;
+    width: 40%;
+}
+
+h2 {
+    text-align: center;
 }
 
 @media screen and (max-width: 480px) {
