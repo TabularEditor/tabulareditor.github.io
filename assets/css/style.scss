@@ -9,17 +9,27 @@
 
 .left {
     align-items: stretch;
-    width: 60%;
+    width: 50%;
     text-align: justify;
+    padding-right: 20px;
 }
 
 .right {
-    align-items: stretch;
+    align-items: center;
+    display:flex;
     width: 40%;
+    padding-left: 20px;
 }
 
 h2 {
     text-align: center;
+}
+
+@media screen {
+    .main-content {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
