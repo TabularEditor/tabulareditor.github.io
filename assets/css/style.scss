@@ -3,32 +3,16 @@
 
 @import "{{ site.theme }}";
 
-.container2 {
-	clear:left;
-	float:left;
-	width:100%;
-	overflow:hidden;
+.group {
+    display: flex;
 }
-.container1 {
-	float:left;
-	width:100%;
-	position:relative;
-	right:50%;
+
+.left {
+    align-items: stretch;
 }
-.col1 {
-	float:left;
-	width:46%;
-	position:relative;
-	left:52%;
-	overflow:hidden;
-	text-align:justify;
-}
-.col2 {
-	float:left;
-	width:46%;
-	position:relative;
-	left:56%;
-	overflow:hidden;
+
+.right {
+    align-items: stretch;
 }
 
 @media screen and (max-width: 480px) {
