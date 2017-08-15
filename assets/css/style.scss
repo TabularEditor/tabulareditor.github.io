@@ -3,23 +3,33 @@
 
 @import "{{ site.theme }}";
 
-.left {
-    float: left;
-    width: 50%;
+#container2 {
+	clear:left;
+	float:left;
+	width:100%;
+	overflow:hidden;
 }
-.right {
-    float: right;
-    width: 50%;
+#container1 {
+	float:left;
+	width:100%;
+	position:relative;
+	right:50%;
 }
-img {
-    max-width: 100%;
-    height: auto;
+#col1 {
+	float:left;
+	width:46%;
+	position:relative;
+	left:52%;
+	overflow:hidden;
 }
-.group:after {
-    content:"";
-    display: table;
-    clear: both;
+#col2 {
+	float:left;
+	width:46%;
+	position:relative;
+	left:56%;
+	overflow:hidden;
 }
+
 @media screen and (max-width: 480px) {
     .left, .right {
         float: none;
