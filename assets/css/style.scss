@@ -3,6 +3,30 @@
 
 @import "{{ site.theme }}";
 
+.left {
+    float: left;
+    width: 50%;
+}
+.right {
+    float: right;
+    width: 50%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.group:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 480px) {
+    .left, .right {
+        float: none;
+        width: auto;
+    }
+}
+
 a {
     color: inherit;
 }
