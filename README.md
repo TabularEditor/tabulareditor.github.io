@@ -30,6 +30,6 @@ Tabular Editor introduces the Best Practice Analyzer. A tool that lets you defin
 
 ## Get started today!
 
-The tool is open source and completely free. Download it from the [release page](https://github.com/otykier/TabularEditor/releases/tag/2.5) to get the latest version.
+The tool is open source and completely free. Download it from the [release page](https://github.com/otykier/TabularEditor/releases/latest) to get the latest version.
 
 If you need more information, check out the [Getting Started wiki](https://github.com/otykier/TabularEditor/wiki/Getting-Started). 
