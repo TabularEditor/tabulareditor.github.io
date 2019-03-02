@@ -4,6 +4,7 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
+    {% if post.publish == "true" %}
     <article class="post">
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}</h3>
 
@@ -12,5 +13,6 @@ layout: default
       </div>
       <br />
     </article>
+    {% endif %}
   {% endfor %}
 </div>
