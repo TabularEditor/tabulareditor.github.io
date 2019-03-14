@@ -28,9 +28,9 @@ As of the March 2019 version of Power BI, connecting Tabular Editor directly to 
 
 In general when encountering this error, a possible workaround is to export the Power BI model as a template (.pbit file), open the .pbit file within Tabular Editor, reapply the changes and then save the file. When reopening the .pbit file in Power BI Desktop, you may encounter some issues depending on what was changed. In my experience, these can often be overcome by refreshing the data or by simply adding and removing a measure within Power BI Desktop. But not always - hence the **unsupported** warning.
 
-### Let's get to it
 However, for adding WhatIf parameters to a .pbit file with Tabular Editor, if you follow the steps below carefully, you should be good (at least with the March 2019 version of Power BI - who knows what happens in future versions. By the way, if you would like Microsoft to officially support making changes through tools such as Tabular Editor, make sure to give [this idea a vote](https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/7345565-power-bi-designer-api)):
 
+### Let's get to it
 1. Export your Power BI model as a template (.pbit file) and close Power BI Desktop
 2. Open the .pbit file in Tabular Editor
 3. In the "Model" menu, choose "New Calculated Table". Rename the newly added table to whatever you like.
