@@ -39,10 +39,8 @@ However, for adding WhatIf parameters to a .pbit file with Tabular Editor, if yo
 6. Rename the newly added calculated table column to whatever you like, but preferably give it the same name as the parent table. Set its Data Type property to "Integer", "Floating Point" or "Currency", depending on your needs.
 7. **Important** Set the "Source Column" property of the calculated table column to `[Value]`. This is needed in order to map the output of the calculated table expression into this column.
 8. Set the "Summarize By" property on the column to "None", to make sure the values within the column are never aggregated.
-9. **Also important** For Power BI to treat the newly added table as a WhatIf parameter, we must add an Extended Property to the calculated table column. Click on the ellipsis button on the "Extended Properties" property of the column, and add a new JsonExtendedProperty. Set the **Name** of this property to `ParameterMetadata` and the **Value** to `{"version":0}`:  
-
+9. **Also important** For Power BI to treat the newly added table as a WhatIf parameter, we must add an Extended Property to the calculated table column. Click on the ellipsis button on the "Extended Properties" property of the column, and add a new JsonExtendedProperty. Set the **Name** of this property to `ParameterMetadata` and the **Value** to `{"version":0}`:
 ![image](https://user-images.githubusercontent.com/8976200/54392008-caa77b80-46a6-11e9-956a-e6993fdeaa89.png)
-
 10. Finally, add a measure to the calculated table, to provide the currently selected WhatIf parameter value. This is the measure you're going to use in Power BI, to pull the WhatIf parameter into your WhatIf scenarios. If you named both your calculated table and calculated table column "MyParam", you should name this measure "MyParam Value" and use the expression: `
 SELECTEDVALUE('MyParam'[MyParam], 50)` where 50 is the default value to use, in case multiple values/nothing is selected on the WhatIf slicer.
 11. Save the .pbit file and close Tabular Editor.
