@@ -126,3 +126,5 @@ foreach(var setting in settings)
 After executing the script, save the .pbit file and close Tabular Editor. Then open the file in Power BI Desktop and behold your brand new auto-generated WhatIf parameters!
 
 ![image](https://user-images.githubusercontent.com/8976200/54393871-971b2000-46ab-11e9-8069-f3a10f57c664.png)
+
+Feel free to leave comments/feedback/questions below!
