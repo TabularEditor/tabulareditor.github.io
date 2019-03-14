@@ -10,6 +10,7 @@ I received a comment on my [introductory webinar video](https://www.youtube.com/
 
 Well, behind the scenes, a WhatIf parameter is simply a Calculated Table with a single column, defined using the [GENERATESERIES](https://dax.guide/generateseries) DAX function (to hold all the possible values of the parameter), along with a measure that uses the [SELECTEDVALUE](https://dax.guide/selectedvalue) function to return the currently filtered value on the table (or a default value, if nothing or multiple values are filtered).
 
+### Preparations
 All of this can easily be added using Tabular Editor, **although doing it is not officially supported by Microsoft**, so as usual, when modifying your Power BI models through Tabular Editor, make sure to save a backup of your .pbix or .pbit file. By default, Tabular Editor will restrict the kind of changes we can apply to a Power BI model, to prevent things from breaking. However, in order to create WhatIf parameters through Tabular Editor, we need to lift this restriction, as we need to add new Calculated Tables to the model. So make sure to check the "Allow unsupported Power BI features" checkbox under File > Preferences > General:
 
 ![image](https://user-images.githubusercontent.com/8976200/54387325-5fa47780-469b-11e9-8071-d766c3a4fd69.png)
@@ -27,6 +28,7 @@ As of the March 2019 version of Power BI, connecting Tabular Editor directly to 
 
 In general when encountering this error, a possible workaround is to export the Power BI model as a template (.pbit file), open the .pbit file within Tabular Editor, reapply the changes and then save the file. When reopening the .pbit file in Power BI Desktop, you may encounter some issues depending on what was changed. In my experience, these can often be overcome by refreshing the data or by simply adding and removing a measure within Power BI Desktop. But not always - hence the **unsupported** warning.
 
+### Let's get to it
 However, for adding WhatIf parameters to a .pbit file with Tabular Editor, if you follow the steps below carefully, you should be good (at least with the March 2019 version of Power BI - who knows what happens in future versions. By the way, if you would like Microsoft to officially support making changes through tools such as Tabular Editor, make sure to give [this idea a vote](https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/7345565-power-bi-designer-api)):
 
 1. Export your Power BI model as a template (.pbit file) and close Power BI Desktop
@@ -46,7 +48,10 @@ SELECTEDVALUE('MyParam'[MyParam], 50)` where 50 is the default value to use, in 
 11. Save the .pbit file and close Tabular Editor.
 12. Open Power BI Desktop.
 
-Easy peasy, isn't it? No? Well, luckily, there's a much better way to perform the time-consuming steps 3-10. Paste the following code into Tabular Editors Advanced Scripting tab:
+Easy peasy, isn't it? No? Well, luckily, there's a much better way to perform the time-consuming steps 3-10.
+
+### Automation for the win!
+Paste the following code into Tabular Editors Advanced Scripting tab:
 
 ```csharp
 // Parameter settings:
@@ -79,6 +84,7 @@ table.AddMeasure(paramName + " Value",
 
 To use the script, modify the settings in the top section to suit your needs, and hit F5. That's it. Steps 3-10 completed in a fraction of a second!
 
+### One step further
 If you want to get really advanced, you can create a text file containing the settings of multiple WhatIf parameters:
 
 ```
