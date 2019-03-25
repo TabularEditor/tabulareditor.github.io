@@ -4,6 +4,8 @@ comments: true
 title: Power BI Tricks - WhatIf parameters
 publish: true
 date: 2019-03-14
+author: Daniel Otykier
+authorurl: http://twitter.com/dotykier
 ---
 
 I received a comment on my [introductory webinar video](https://www.youtube.com/watch?v=HQf55BGUJmk), regarding whether Tabular Editor could be used to generate lots of WhatIf parameters quickly.
