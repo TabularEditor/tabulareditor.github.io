@@ -8,6 +8,8 @@ author: Daniel Otykier
 authorurl: http://twitter.com/dotykier
 ---
 
+**Update May 29th 2019**: It turns out that the technique outlined here can be used for SSAS or Azure Analysis Services Tabular models of Compatibility Level 1400+. In fact, just by adding the `ParameterMetadata` Extended Property (step 9 below) to any numeric column in your model, you can instruct Power BI to display a single-select slider as the default visual for the column.
+
 I received a comment on my [introductory webinar video](https://www.youtube.com/watch?v=HQf55BGUJmk), regarding whether Tabular Editor could be used to generate lots of WhatIf parameters quickly.
 
 Well, behind the scenes, a WhatIf parameter is simply a Calculated Table with a single column, defined using the [GENERATESERIES](https://dax.guide/generateseries) DAX function (to hold all the possible values of the parameter), along with a measure that uses the [SELECTEDVALUE](https://dax.guide/selectedvalue) function to return the currently filtered value on the table (or a default value, if nothing or multiple values are filtered).
