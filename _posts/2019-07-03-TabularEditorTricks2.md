@@ -12,7 +12,7 @@ authorurl: http://twitter.com/dotykier
 
 When building Analysis Services tabular models on top of a Data Warehouse or Data Mart on a relational database, I recommend using the Legacy (Provider) data sources instead of the Power Query data sources available since SQL Server 2017. Unfortunately, Power Query data sources have become the default in SSDT, and [it has become quite tricky to create Legacy data sources](https://blog.crossjoin.co.uk/2018/01/15/using-your-own-sql-queries-for-tables-with-modern-data-sources-in-ssas-2016-and-azure-analysis-services/) (in short, check "Enable Legacy data sources" under Options > Analysis Services Tabular > Data Import).
 
-There are a couple of reasons for that:
+There are a couple of reasons why I prefer Legacy data sources:
 
 - Refresh performance is similar, but in my experience the Power Query data sources have a small initialisation overhead, which can be annoying if you need to do many frequent, small refreshes.
 - You don't want to do any M transformation in your Tabular model partition queries anyway - that's the whole purpose of having an ETL process where data is loaded into a star schema on the relational source.
