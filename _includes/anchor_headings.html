@@ -90,7 +90,8 @@
     {% endif %}
 
     {% capture new_heading %}
-      <h {{ include.bodyPrefix }} {{ _hAttrToStrip }}
+      <h{{ _hAttrToStrip }}
+        {{ include.bodyPrefix }}
         {% if beforeHeading %}
           {{ anchor }}{{ header }}
         {% else %}
