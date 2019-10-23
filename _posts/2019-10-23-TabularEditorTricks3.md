@@ -54,4 +54,4 @@ Now, when exporting the translation to a .json file again, it will look like thi
 
 ![image](https://user-images.githubusercontent.com/8976200/67422517-eecf2180-f5d2-11e9-9af5-a66026f7b82e.png)
 
-Ahh - much better! Instruct your translator to edit all the "translatedCaption" strings and hand the file back to you. That's it!
+Ahh - much better! Instruct your translator to edit all the "translatedCaption", "translatedDisplayFolder" and "translatedDesription" values and hand the file back to you. That's it!
