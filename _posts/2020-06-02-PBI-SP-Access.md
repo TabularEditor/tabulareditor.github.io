@@ -43,7 +43,7 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
 
 <img width="400" alt="Connecting to a Power BI dataset using Tabular Editor" src="https://user-images.githubusercontent.com/8976200/83492010-ed43d100-a4b2-11ea-98cc-be63b0a68ddd.png">
 
-<mark>**Warning:** Once you make a change to a dataset hosted in an XMLA write-enabled workspace using external tools such as Tabular Editor, you will no longer be able to download a .pbix file from the dataset.</mark>
+<mark>**Warning:** Once you make a change to a dataset hosted in an XMLA write-enabled workspace using external tools such as Tabular Editor, you will no longer be able to download a .pbix file from the dataset. This is a limitation on the Power BI Service which will hopefully not apply once XMLA read/write reaches general availability (it's still in preview as of this writing).</mark>
 
 ### Create a Service Principal
 
