@@ -115,7 +115,9 @@ You can also perform the deployment using Tabular Editors command-line interface
 start /wait TabularEditor.exe Model.bim -D "Provider=MSOLAP;Data Source=<xmla endpoint>;User ID=app:<application id>@<tenant id>;Password=<application secret>" "AdventureWorks" -O
 ```
 
-[More information on the command line syntax here](https://github.com/otykier/TabularEditor/wiki/Command-line-Options).
-[See this article for more information on setting up CI/CD with Tabular Editor](https://tabulareditor.com/2019/10/08/DevOps3.html).
-
 That's it! Feel free to post questions below or on [GitHub](https://github.com/otykier/tabulareditor/issues). 
+
+### More information:
+- [Power BI Premium and Service Principals (Microsoft docs)](https://docs.microsoft.com/en-us/power-bi/admin/service-premium-service-principal)
+- [Tabular Editor CLI](https://github.com/otykier/TabularEditor/wiki/Command-line-Options).
+- [DevOps with Tabular Editor](https://tabulareditor.com/2019/10/08/DevOps3.html).
