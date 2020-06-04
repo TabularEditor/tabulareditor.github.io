@@ -90,9 +90,9 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
  
 ### Connect with Tabular Editor
 
-*Note: You need the [latest version (2.10.0) of Tabular Editor](https://github.com/otykier/TabularEditor/releases/latest), for this last step to work, as the Power BI Service manages the database IDs independently of their names, and previous versions of Tabular Editor always assumed identical databases IDs and names. If you're using an earlier version, you may not be able to overwrite an existing dataset, and you might see an error message even after successful deployment.*
+*Note: You need the [latest version (2.10.0) of Tabular Editor](https://github.com/otykier/TabularEditor/releases/latest) for this last step to work, as the Power BI Service manages the database IDs independently of their names, and previous versions of Tabular Editor always assumed identical database IDs and names. If you're using an earlier version, you may not be able to overwrite an existing dataset, and you might see an error message even after successful deployment.*
 
-Sometimes, it can take a few minutes for all of these settings to come through. Grab a cup of coffee. When you come back, you can test the Service Principal connection using Tabular Editor. Provide the following connection string as the "server name" when connecting:
+Sometimes, it can take a few minutes for all of the settings in the above steps to come through, so go grab a cup of coffee. When you come back, you can test the Service Principal connection using Tabular Editor. Provide the following connection string as the "server name" when connecting:
 
 ```
 Provider=MSOLAP;Data Source=<xmla endpoint>;User ID=app:<application id>@<tenant id>;Password=<application secret>
@@ -107,12 +107,15 @@ Make sure to replace the placeholders with their actual values:
 
 <img width="400" alt="Screenshot 2020-06-02 at 09 52 06" src="https://user-images.githubusercontent.com/8976200/83494985-60e7dd00-a4b7-11ea-9187-d56523237b09.png">
 
-The same connection string can be used when invoking Tabular Editor through the command-line interface. For example, to deploy a local Model.bim file as a dataset named "AdventureWorks" use the following command. The `-O` switch allows you to overwrite an existing dataset with the same name:
+Remember - if you want to make a change to the model, you only need to hit CTRL+S to save the change directly back to the Power BI Premium capacity (this is probably not the best thing to do on a production dataset...). Alternatievly, you can deploy the model metadata as a new dataset by going to the Model > Deploy menu (or hit F6), and then use the same connection string for the server name.
+
+You can also perform the deployment using Tabular Editors command-line interface, which is what you typically need for CI/CD integration. For example, to deploy a local Model.bim file as a dataset named "AdventureWorks" use the following command. The `-O` switch allows you to overwrite an existing dataset with the same name:
 
 ```
 start /wait TabularEditor.exe Model.bim -D "Provider=MSOLAP;Data Source=<xmla endpoint>;User ID=app:<application id>@<tenant id>;Password=<application secret>" "AdventureWorks" -O
 ```
 
 [More information on the command line syntax here](https://github.com/otykier/TabularEditor/wiki/Command-line-Options).
+[See this article for more information on setting up CI/CD with Tabular Editor](https://tabulareditor.com/2019/10/08/DevOps3.html).
 
 That's it! Feel free to post questions below or on [GitHub](https://github.com/otykier/tabulareditor/issues). 
