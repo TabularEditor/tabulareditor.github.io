@@ -17,12 +17,12 @@ In order to set up unattended jobs or pipelines that perform XMLA write operatio
 
 These are the steps we need to go through in order to set this up. Note, these steps has to be performed by a user with Power BI Administrator and Azure Active Directory Administrator permissions:
 
-- Enable XMLA read/write access on a Power BI workspace
-- Create a Service Principal
-- Create a Security Group and include the SP
-- Enable Service Principal API access
-- Set Service Principal as Workspace Admin
-- Connect with Tabular Editor
+- [Enable XMLA read/write access on a Power BI workspace](#enable-xmla-readwrite-access-on-a-power-bi-workspace)
+- [Create a Service Principal](#create-a-service-principal)
+- [Create a Security Group and include the SP](#create-a-security-group-and-include-the-sp)
+- [Enable Service Principal API access](#enable-service-principal-api-access)
+- [Set Service Principal as Workspace Admin](#set-service-principal-as-workspace-admin)
+- [Connect with Tabular Editor](#connect-with-tabular-editor)
 
 ### Enable XMLA read/write access on a Power BI workspace
 For most scenarios that involve Tabular Editor, we need to [enable XMLA read/write](https://aka.ms/XmlaEndPoint) on our Power BI workspace.
