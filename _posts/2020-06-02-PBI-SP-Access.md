@@ -10,7 +10,7 @@ authorurl: http://twitter.com/dotykier
 
 This article provides a step-by-step instruction on how to enable Service Principal (SP) access to a Power BI workspace in dedicated capacity (Power BI Premium or embedded/A sku).
 
-For more details, read the documentation here: [Automate Premium workspace and dataset tasks using service principals](https://docs.microsoft.com/en-us/power-bi/admin/service-premium-service-principal).
+In the following, I will try to highlight the minimal number of steps necessary to enable Service Principal authentication. You can find all the details in the official documentation: [Automate Premium workspace and dataset tasks using service principals](https://docs.microsoft.com/en-us/power-bi/admin/service-premium-service-principal).
 
 ## Why Service Principal access?
 In order to set up unattended jobs or pipelines that perform XMLA write operations (refresh, deploy, etc.) on a dataset in a Power BI workspace, we have to use a Service Principal. Specifically, if we want to use Tabular Editor's command-line interface to perform a model deployment, we don't have any other options, as the command-line does not allow interactive authentication, which is required on any tenant that has multi-factor authentication (MFA) enabled.
