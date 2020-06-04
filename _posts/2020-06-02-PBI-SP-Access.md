@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-publish: false
+publish: true
 title: Service Principal access to dedicated capacity XMLA endpoint
 date: 2020-06-02
 author: Daniel Otykier
@@ -43,7 +43,7 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
 
 <img width="400" alt="Connecting to a Power BI dataset using Tabular Editor" src="https://user-images.githubusercontent.com/8976200/83492010-ed43d100-a4b2-11ea-98cc-be63b0a68ddd.png">
 
-<mark>**Warning:** Once you make a change to a dataset hosted in an XMLA write-enabled workspace using external tools such as Tabular Editor, you will no longer be able to download a .pbix file from the dataset. This is a limitation on the Power BI Service which will hopefully not apply once XMLA read/write reaches general availability (it's still in preview as of this writing).</mark>
+*Warning: Once you make a change to a dataset hosted in an XMLA write-enabled workspace using external tools such as Tabular Editor, you will no longer be able to download a .pbix file from the dataset. This is a limitation on the Power BI Service which will hopefully not apply once XMLA read/write reaches general availability (it's still in preview as of this writing).*
 
 ### Create a Service Principal
 
@@ -87,6 +87,8 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
  
 ### Connect with Tabular Editor
 
+*Note: You need the [latest version (2.10.0) of Tabular Editor](https://github.com/otykier/TabularEditor/releases/latest), for this last step to work, as the Power BI Service manages the database IDs independently of their names, and previous versions of Tabular Editor always assumed identical databases IDs and names. If you're using an earlier version, you may not be able to overwrite an existing dataset, and you might see an error message even after successful deployment.*
+
 Sometimes, it can take a few minutes for all of these settings to come through. Grab a cup of coffee. When you come back, you can test the Service Principal connection using Tabular Editor. Provide the following connection string as the "server name" when connecting:
 
 ```
@@ -102,6 +104,12 @@ Make sure to replace the placeholders with their actual values:
 
 <img width="400" alt="Screenshot 2020-06-02 at 09 52 06" src="https://user-images.githubusercontent.com/8976200/83494985-60e7dd00-a4b7-11ea-9187-d56523237b09.png">
 
-The same connection string can be used when invoking Tabular Editor through the command-line interface:
+The same connection string can be used when invoking Tabular Editor through the command-line interface. For example, to deploy a local Model.bim file as a dataset named "AdventureWorks" use the following command. The `-O` switch allows you to overwrite an existing dataset with the same name:
 
-Note - you need the [latest version (2.9.9) of Tabular Editor](https://github.com/otykier/TabularEditor/releases/latest), for this last step to work, as the Power BI Service manages the database IDs independently of their names, and previous versions of Tabular Editor always assumed identical databases IDs and names.
+```
+start /wait TabularEditor.exe Model.bim -D "Provider=MSOLAP;Data Source=<xmla endpoint>;User ID=app:<application id>@<tenant id>;Password=<application secret>" "AdventureWorks" -O
+```
+
+[More information on the command line syntax here](https://github.com/otykier/TabularEditor/wiki/Command-line-Options).
+
+That's it! Feel free to post questions below or on [GitHub](https://github.com/otykier/tabulareditor/issues). 
