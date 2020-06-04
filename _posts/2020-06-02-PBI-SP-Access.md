@@ -28,9 +28,15 @@ These are the steps we need to go through in order to set this up. Note, these s
 For most scenarios that involve Tabular Editor, we need to [enable XMLA read/write](https://aka.ms/XmlaEndPoint) on our Power BI workspace.
 
 1. In the Power BI Admin Portal, go to Capacity Settings. If your organization uses Power BI Premium, locate the capacity that hosts your workspace under the "Power BI Premium" tab. If your capacity is a Power BI Embedded or A SKU, locate it under the "Power BI Embedded" tab. Click on the capacity name.
-  <img width="1200" alt="Locating the capacity settings" src="https://user-images.githubusercontent.com/8976200/83491557-43644480-a4b2-11ea-85c1-e37c3fa4d12c.png">
+
+<img width="1200" alt="Locating the capacity settings" src="https://user-images.githubusercontent.com/8976200/83491557-43644480-a4b2-11ea-85c1-e37c3fa4d12c.png">
+
+{:start="2"}
 2. Expand the "Workloads" section. Scroll down and locate the XMLA Endpoint dropdown. Set it to "Read Write". Note: At the time of this writing, there's a bug that requires you to also disable the "Dataflows" workload. Click "Apply".
-  <img width="328" alt="Enabling XMLA read/write on dedicated capacity" src="https://user-images.githubusercontent.com/8976200/83491762-8cb49400-a4b2-11ea-9668-2786e94a4f80.png">
+ 
+<img width="328" alt="Enabling XMLA read/write on dedicated capacity" src="https://user-images.githubusercontent.com/8976200/83491762-8cb49400-a4b2-11ea-9668-2786e94a4f80.png">
+
+{:start="3"}
 3. At this point, you should be able to connect using interactive (personal) authentication and make changes to datasets in the workspace using Tabular Editor, provided your user is an administrator of the workspace. Use the following string as the "server name" when connecting:
 
 ```
@@ -45,10 +51,16 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
 
 1. In the Azure Portal, go to Azure Active Directory. Take a note of the Tenant ID. You will need it later, when specifying the connection string.
 2. Go to "App Registrations", click "New registration".
-  <img width="600" alt="Screenshot 2020-06-02 at 09 31 40" src="https://user-images.githubusercontent.com/8976200/83492653-e36e9d80-a4b3-11ea-973c-707bcbf21e23.png">
+
+<img width="600" alt="Screenshot 2020-06-02 at 09 31 40" src="https://user-images.githubusercontent.com/8976200/83492653-e36e9d80-a4b3-11ea-973c-707bcbf21e23.png">
+
+{:start="3"}
 3. Provide a name for the Service Principal. Leave the account type setting as single tenant and the redirect URI blank. Hit "Register".
 4. Take a note of the Application (client) ID. This will also be needed later, when specifying the connection string.
-  <img width="1200" alt="Screenshot 2020-06-02 at 09 35 22" src="https://user-images.githubusercontent.com/8976200/83493152-a3f48100-a4b4-11ea-938e-500ee691949f.png">
+
+<img width="1200" alt="Screenshot 2020-06-02 at 09 35 22" src="https://user-images.githubusercontent.com/8976200/83493152-a3f48100-a4b4-11ea-938e-500ee691949f.png">
+
+{:start="5"}
 5. Click on "Certificates & Secrets" and then "New client secret". Description is optional. Set the expiration as desired (but remember that you'll have to update any connection strings that use the Service Principal later on, when the secret expires).
 6. Write down the secret. You won't be able to retrieve it later on, and it is needed when specifying the connection string.
 
@@ -57,7 +69,8 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
 1. Go back to Azure Active Directory in the Azure Portal. Click on "Groups". Then "New Group".
 2. Leave the "Group type" as "Security", give it a name and an optional description.
 3. Go to "Members" of the newly created group. Click "Add members" and then search for the Service Principal you created above, using its **name** as the filter string.
-  <img width="1100" alt="Screenshot 2020-06-02 at 09 44 37" src="https://user-images.githubusercontent.com/8976200/83493855-b327fe80-a4b5-11ea-8415-2f0e36c1c472.png">
+
+<img width="1100" alt="Screenshot 2020-06-02 at 09 44 37" src="https://user-images.githubusercontent.com/8976200/83493855-b327fe80-a4b5-11ea-8415-2f0e36c1c472.png">
 
 ### Enable Service Principal API access
 
@@ -65,13 +78,15 @@ powerbi://api.powerbi.com/v1.0/<organization name>/<workspace name>
 2. Go to the Admin Portal, click "Tenant Settings".
 3. Scroll down to locate the "Developer section". Expand "Allow service principals to use Power BI APIs".
 4. Enable the setting. Under "Apply to", make sure "Specific security groups (Recommended)" has been selected, and enter the name of the security group you created in the previous step. Click "Apply".
-  <img width="600" alt="Screenshot 2020-06-02 at 09 47 01" src="https://user-images.githubusercontent.com/8976200/83494107-0f8b1e00-a4b6-11ea-9a0a-3fb759cecfaa.png">
+
+<img width="600" alt="Screenshot 2020-06-02 at 09 47 01" src="https://user-images.githubusercontent.com/8976200/83494107-0f8b1e00-a4b6-11ea-9a0a-3fb759cecfaa.png">
 
 ### Set Service Principal as Workspace Admin
 
 1. Go to the Power BI Workspace. Click "Access".
 2. Type the name of the Service Principal into the email address field. Set the dropdown below to "Admin". Click "Add"
-  <img width="1200" alt="Screenshot 2020-06-02 at 09 52 06" src="https://user-images.githubusercontent.com/8976200/83494553-bec7f500-a4b6-11ea-8ff9-18b4ba242465.png">
+
+<img width="1200" alt="Screenshot 2020-06-02 at 09 52 06" src="https://user-images.githubusercontent.com/8976200/83494553-bec7f500-a4b6-11ea-8ff9-18b4ba242465.png">
  
 ### Connect with Tabular Editor
 
