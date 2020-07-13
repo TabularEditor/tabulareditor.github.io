@@ -4,6 +4,12 @@ Tabular Editor provides an intuitive hierarchical view of every object in your T
 
 <img src="https://user-images.githubusercontent.com/8976200/29272423-46ceafa8-8100-11e7-81dc-bddbb38f80f8.png" width="450">
 
+## Power BI Desktop Integration
+
+Boost your Power BI Desktop productivity with Tabular Editor. Easily make batch changes to DAX measures and unlock advanced modelling capabilities such as Calculation Groups and Perspectives. Power BI Desktop automatically refreshes visuals and the field list when Tabular Editor saves the changes. [Read more](https://github.com/otykier/TabularEditor/wiki/Power-BI-Desktop-Integration).
+
+<img src="https://user-images.githubusercontent.com/8976200/87296268-cd1e1d80-c506-11ea-8b1d-238a27bf420b.png" width="450">
+
 ## No workspace database required
 
 Tabular Editor lets you work offline by opening a Tabular Model directly from a Model.bim file. You can save your changes back to the file, or deploy the model to a Tabular server. You can also open a Tabular Model that was previously deployed to a server, make offline changes and then deploy those changes back to the server with a single click.
@@ -12,7 +18,7 @@ Tabular Editor lets you work offline by opening a Tabular Model directly from a 
 
 ## No downtime even on huge Models
 
-Since Tabular Editor only considers model metadata, you can load huge models with 100s of tables and 1000s of measures, and apply changes instantly. The model is not validated until you deploy it, and you are responsible for recalculating the model when the need arises. Compared to Visual Studio, this means you will never again have to wait for the workspace database to catch up, whenever you change a property on an object. Tabular Editor also supports Azure Analysis Services.
+Since Tabular Editor only considers model metadata, you can load huge models with 100s of tables and 1000s of measures, and apply changes instantly. The model is not validated until you deploy it, and you are responsible for recalculating the model when the need arises. Compared to Visual Studio, this means you will never again have to wait for the workspace database to catch up, whenever you change a property on an object. Tabular Editor also supports Azure Analysis Services and Power BI Premium datasets through XMLA read/write.
 
 <img src="https://user-images.githubusercontent.com/8976200/29273714-9cedc194-8105-11e7-8d41-678742bcd6c8.png">
 
