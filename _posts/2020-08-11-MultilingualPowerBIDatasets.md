@@ -10,7 +10,7 @@ authorurl: http://twitter.com/dotykier
 
 ## Multilingual Datasets
 
-A little known fact about the Power BI service, is that Analysis Services metadata translations actually work just fine for a dataset within a dedicated capacity workspace (Power BI Premium or A SKUs). You can add metadata translations to a dataset in Premium in two ways: Either [through the XMLA read/write endpoint](https://www.kasperonbi.com/setting-up-translations-for-power-bi-premium/) or by using the [External Tools integration in Power BI Desktop](https://powerbi.microsoft.com/en-us/blog/announcing-public-preview-of-external-tools-in-power-bi-desktop/). This article demonstrates the latter, using Tabular Editor as the external tool.
+A little known fact about the Power BI service, is that metadata translations actually work just fine for an imported or DirectQuery dataset within a dedicated capacity workspace (Power BI Premium or A SKUs). You can add metadata translations to a dataset in Premium in two ways: Either [through the XMLA read/write endpoint](https://www.kasperonbi.com/setting-up-translations-for-power-bi-premium/) or by using the [External Tools integration in Power BI Desktop](https://powerbi.microsoft.com/en-us/blog/announcing-public-preview-of-external-tools-in-power-bi-desktop/). This article demonstrates the latter, using Tabular Editor as the external tool.
 
 You can also watch [Christian Wade demonstrate this technique in a video](https://mymbas.microsoft.com/sessions/1165847d-260a-4d28-bec7-6843932e4467) (starting at around 7:00 minutes).
 
