@@ -63,5 +63,8 @@ Alternatively, you can export a .json file from Tabular Editor for use with othe
 
 When you're done translating, hit CTRL+S in Tabular Editor to update the model metadata in Power BI Desktop. Then, close Tabular Editor, go back to Power BI Desktop and hit CTRL+S here to save your .pbix file. At this point, the .pbix file contains all the translations you just defined in Tabular Editor, but unfortunately there's no way to observe the translations in Desktop. You can however [test them in Excel](https://www.sqlbi.com/tools/analyze-in-excel-for-power-bi-desktop/) by adding a LocaleIdentifier to the connection string.
 
-The only thing left to do then, is publish the .pbix file to the Power BI service. If you're publishing to a workspace on dedicated capacity (Premium or A-SKUs), you should see translations being correctly observed in the Power BI service on both the dataset field list as well as any report visuals.
+The only thing left to do then, is publish the .pbix file to the Power BI service. If you're publishing to a workspace on dedicated capacity (Premium or A-SKUs), you should see translations being correctly observed in the Power BI service on both the dataset field list as well as any report visuals. If you enabled [XMLA read/write](https://docs.microsoft.com/en-us/power-bi/admin/service-premium-connect-tools) on your capacity, you can even deploy the model metadata directly from Tabular Editor (Model > Deploy) instead of saving the changes back to PBI Desktop and publishing from there.
 
+And here we go - multilingual datasets in the Power BI service that are observed both in the field list and on the report canvas:
+
+![image](https://user-images.githubusercontent.com/8976200/91023339-b800d800-e5f6-11ea-9cbc-2622bd794f3d.png)
