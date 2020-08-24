@@ -77,7 +77,7 @@ var dynamicMeasureDax =
 // Assign DAX expressions:
 selectorTable.Expression = selectorTableDax;
 dynamicMeasure.Expression = dynamicMeasureDax;
-```csharp
+```
 
 ## Using the script
 
