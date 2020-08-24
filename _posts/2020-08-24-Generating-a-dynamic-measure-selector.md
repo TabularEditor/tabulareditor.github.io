@@ -87,7 +87,7 @@ Once you selected the measures you want to include in the measure selector and t
 
 For example, if I run the script with this selection of measures:
 
-![image](https://user-images.githubusercontent.com/8976200/91022006-dfef3c00-e5f4-11ea-89f1-98c1253199c9.png)
+![image](https://user-images.githubusercontent.com/8976200/91032066-bb4d9100-e601-11ea-9df6-1b2eac99737e.png)
 
 The script sets the calculated table expression as follows:
 
