@@ -12,7 +12,7 @@ authorurl: http://twitter.com/dotykier
 
 For certain kinds of reports, it sometimes makes sense to be able to select which measures should be displayed by checking off members on a dimension, rather than including individual measures from the field list. There are many blogs and articles online that describe this pattern in more details. You can find them by searching for [dynamic measure selector switch](https://www.google.com/search?&q=dynamic+measure+selector+switch).
 
-Based on [a question I received on GitHub recently](https://github.com/otykier/TabularEditor/issues/578), this article shows you how to auto-generate a disconnected table for selection together with the SWITCH measure to go along with the table. The technique here used a Tabular Editor script, that is executed while a number of measures are multi-selected in the explorer tree.
+Based on [a question I received on GitHub recently](https://github.com/otykier/TabularEditor/issues/578), this article shows you how to auto-generate a disconnected table for selection together with the SWITCH measure to go along with that table. The technique here uses a Tabular Editor script, that is executed while a number of measures are multi-selected in the explorer tree.
 
 ## Script
 
