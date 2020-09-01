@@ -28,12 +28,13 @@ If you already created your model using a Power Query data source and M partitio
    
    foreach(var table in Model.Tables)
    {
+       if(table is CalculatedTable || table is CalculationGroupTable) continue;
        table.Partitions.ConvertToLegacy(legacy);
        // foreach(var partition in table.Partitions) partition.Query = "SELECT * FROM " + table.Name;
    }
    ```
 3. Before running the script, adjust the name of the data source in line 1, if you provided a different name for the new legacy data source.
-4. (Optional) If the names of the imported tables in your model correspond to the names of tables or views in your data source, you can uncomment line 6 to automatically set the query of each partition to a basic `SELECT * FROM <table/view name>`-query.
+4. (Optional) If the names of the imported tables in your model correspond to the names of tables or views in your data source, you can uncomment line 7 to automatically set the query of each partition to a basic `SELECT * FROM <table/view name>`-query.
 5. Run the script
 6. Go through each partition in your model to verify that the partition is of the correct type (Legacy), and that the partition is using the proper data source. If you skipped step 4, also make sure to enter the proper SQL query on each partition:
    ![image](https://user-images.githubusercontent.com/8976200/60573023-175ab380-9d77-11e9-88bc-1665a686d734.png)
@@ -42,9 +43,11 @@ If you already created your model using a Power Query data source and M partitio
 And that's it - all partitions on your model are now 100% legacy partitions.
 
 ### Fine print
+**Update August 2020**: There was a bug in the original script if you uncommented line 7, in that the loop would iterate through ALL tables of the model, including calculated tables and calculation group tables. Setting the DAX expression of a calculated table to "SELECT * FROM ..." is probably not what you want, and if your model contained a calculation group table, the script would outright crash. This is because the Query property is not supported for partitions on a calculation group table. I added the check in line 5 to skip any calculated tables or calculation group tables in the model.
+
 The `Partitions.ConvertToLegacy(<data source>)` method called by the script replaces each M partition on a table, with a Legacy partition that points to the specified (legacy) data source. It also assigns the M expression from the original M partition to the "Query" property of the newly created legacy partition, which is of course nonsense, as legacy data sources do not understand M queries. This is why you should go through each partition to update the query manually, or use the optional step 4, provided your source tables/views have the same names as the imported tables.
 
-You could also consider modifying line 6 of the script to construct the legacy partition query in a different way, to save the manual hassle of going through each partition query. But this assumes that you have some consistency in the way tables and/or partitions have been named within your model:
+You could also consider modifying line 7 of the script to construct the legacy partition query in a different way, to save the manual hassle of going through each partition query. But this assumes that you have some consistency in the way tables and/or partitions have been named within your model:
 
 ```csharp
 foreach(var partition in table.Partitions) partition.Query = "SELECT * FROM [tabular].[vw_" + partition.Name + "]";
