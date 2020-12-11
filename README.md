@@ -1,3 +1,9 @@
+## Looking for Tabular Editor 3?
+
+Tabular Editor 3 is not yet released, but you can sign up for the preview <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tW81KZURUlHS1MxQjcwQzhMT0xESDRCNkJFNlJKWi4u">here</a>.
+
+<img src="https://user-images.githubusercontent.com/8976200/101912836-925a0780-3bc2-11eb-8f7b-a03eaf5004d3.png" width="200">
+
 ## Easily build, maintain and manage Tabular Models
 
 Tabular Editor provides an intuitive hierarchical view of every object in your Tabular Model metadata. Columns, Measures and Hierarchies are arranged in Display Folders by default. You can edit properties of one or more objects, by (multi)selecting them in the tree. A DAX Editor with syntax highlighting lets you easily edit the expressions of Measures, Calculated Columns and Calculated Tables.
