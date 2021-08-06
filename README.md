@@ -1,6 +1,6 @@
 ## Looking for Tabular Editor 3?
 
-Tabular Editor 3 is not yet released, but you can sign up for the preview <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__tW81KZURUlHS1MxQjcwQzhMT0xESDRCNkJFNlJKWi4u">here</a>.
+Tabular Editor 3 is the evolution of the open-source version. It is available on commercial terms through [tabulareditor.com](https://tabulareditor.com). A fully functional 30-day trial is available as well.
 
 <img src="https://user-images.githubusercontent.com/8976200/101912836-925a0780-3bc2-11eb-8f7b-a03eaf5004d3.png" width="200">
 
